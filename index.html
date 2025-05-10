@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehlicious - Milk Tea</title>
+    <meta name="description" content="Nikmati milk tea berasa premium. Rasa autentik, bahan premium, langsung pesan via WhatsApp!">
+    
+    <!-- Preload -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="Tehlicious - Milk Tea ">
+    <meta property="og:description" content="Nikmati milk tea">
+    <meta property="og:image" content="https://tehlicious.com/images/social-share.jpg">
+    <meta property="og:url" content="https://tehlicious.com">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <p>Memuat Kelezatan...</p>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo1.png" alt="Tehlicious" class="logo" width="180" height="180">
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#products">Menu</a></li>
+                    <li><a href="#about">Keunggulan</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Milk Tea </h1>
+                <p class="subtitle">Nikmati keautentikan rasa tanpa topping, fokus pada kualitas bahan dasar</p>
+                
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-list"></i> Lihat Menu
+                    </a>
+                    <a href="https://wa.me/6288271952562" class="btn btn-wa">
+                        <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="images/hero-milktea.png" alt="Tehlicious Milk Tea" width="400" height="400" class="floating">
+            </div>
+        </div>
+        <div class="bubble-tea-animation">
+            <div class="bubble" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="bubble" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="bubble" style="left: 70%; animation-delay: 1s;"></div>
+        </div>
+        <div class="wave-shape">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#FF6B6B"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#FF6B6B"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FF6B6B"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Tehlicious?</h2>
+            <p class="section-subtitle">Kami fokus pada esensi milk tea yang sebenarnya</p>   
+    <div class="features-grid">
+        <!-- Existing features... -->
+
+        <!-- New Feature 1: Perfect Size -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-ruler-combined"></i>
+            </div>
+            <h3>Ukuran Pas</h3>
+            <p>Cukup untuk kenikmatan tanpa berlebihan</p>
+        </div>
+    
+        <!-- New Feature 2: Consistent Taste -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Rasa Konsisten</h3>
+            <p>Diracik dengan takaran tepat setiap saat</p>
+        </div>
+    
+        <!-- New Feature 3: Affordable Luxury -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <h3>Harga Terjangkau</h3>
+            <p>Premium quality dengan harga hemat (Rp 10.000)</p>
+        </div>
+    
+        <!-- New Feature 4: Quick Service -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-stopwatch"></i>
+            </div>
+            <h3>Pesan Kilat</h3>
+            <p>Siap dalam 3 menit - perfect for on-the-go</p>
+        </div>
+    
+        <!-- New Feature 5: No Regrets -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>No Regrets</h3>
+            <p>100% kepuasan atau kami ganti baru</p>
+        </div>
+    </div>
+    
+    <!-- Menu Produk -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Menu Kami</h2>
+            <p class="section-subtitle">Pilih varian rasa favoritmu</p>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Terlaris</div>
+                    <img src="images/foto1.png" alt="Original Milk Tea" class="product-image" width="300" height="300">
+                    <div class="product-content">
+                        <h3>Original Milk Tea</h3>
+                        <p class="product-desc">Rasa original yang lembut dengan aroma teh premium</p>
+                        <div class="product-meta">
+                            <span class="price">Rp 10.000</span>
+                        </div>
+                        <a href="https://wa.me/6288271952562?text=Saya%20ingin%20memesan%20Original%20Milk%20Tea" class="btn btn-wa btn-block">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/foto.png" alt="Taro Milk Tea" class="product-image" width="300" height="300">
+                    <div class="product-content">
+                        <h3>Chocolate Milk Tea</h3>
+                        <p class="product-desc">Kelezatan coklat alami yang creamy</p>
+                        <div class="product-meta">
+                            <span class="price">Rp 10.000</span>
+                            <span class="size"></span>
+                        </div>
+                        <a href="https://wa.me/6288271952562?text=Saya%20ingin%20memesan%20Chocolate%20Milk%20Tea" class="btn btn-wa btn-block">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge">Baru!</div>
+                    <img src="images/foto2.png" alt="Thai Milk Tea" class="product-image" width="300" height="300">
+                    <div class="product-content">
+                        <h3>Matcha Milk Tea</h3>
+                        <p class="product-desc">Autentik rasa Matcha dengan rempah khas</p>
+                        <div class="product-meta">
+                            <span class="price">Rp 10.000</span>
+                        </div>
+                        <a href="https://wa.me/6288271952562?text=Saya%20ingin%20memesan%20Matcha%20Milk%20Tea" class="btn btn-wa btn-block">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimoni -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <p class="section-subtitle">Testimoni pelanggan Tehlicious</p>
+            
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Original Milk Tea-nya pas banget rasanya, nggak terlalu manis dan terasa banget aroma teh aslinya. Ukuran juga pas buat sekali minum."</p>
+                    <div class="testimonial-author">
+                        <img src="images/wanita1.jpg" alt="Rina" class="author-img">
+                        <div class="author-info">
+                            <h4>Rina</h4>
+                            <span>Bandung</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Suka banget sama Chocolate Milk Tea-nya, warnanya cantik dan rasanya enak banget. Gak perlu topping juga udah enak."</p>
+                    <div class="testimonial-author">
+                        <img src="images/pria1.jpeg" alt="Andi" class="author-img">
+                        <div class="author-info">
+                            <h4>Andi</h4>
+                            <span>Jakarta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Matcha Milk Tea-nya beneran rasa Matcha banget! Rempahnya kerasa dan harum. Jadi langganan tiap weekend."</p>
+                    <div class="testimonial-author">
+                        <img src="images/wanita2.jpg" alt="Sari" class="author-img">
+                        <div class="author-info">
+                            <h4>Sari</h4>
+                            <span>Bekasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Enjoy?</h2>
+            <p>Pesan sekarang dan nikmati kelezatan milk tea premium kami</p>
+            <a href="https://wa.me/6288271952562" class="btn btn-wa btn-lg">
+                <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+            </a>
+        </div>
+    </section>
+    
+    <!-- Kontak -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Kontak Kami</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0882-7195-2562</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@tehlicious.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Rasa Enak No. 123, Bandung</span>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.674441881206!2d101.4430294!3d0.5363981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ad001ae31f8b%3A0x980122200e43811c!2sHARAPAN%20JAYA!5e0!3m2!1sen!2sid!4v1712345678901!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo1.png" alt="Tehlicious" class="footer-logo" width="150" height="50">
+                    <p>Milk tea berasa premium .</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#">Original Milk Tea</a></li>
+                        <li><a href="#">Chocolate Milk Tea</a></li>
+                        <li><a href="#">Matcha Milk Tea</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Jam Operasional</h3>
+                    <ul>
+                        <li>Senin-Jumat: 10.00-20.00</li>
+                        <li>Sabtu-Minggu: 11.00-21.00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tehlicious. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WA Button -->
+    <a href="https://wa.me/6288271952562" class="floating-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tehlicious - Premium Tea Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #5D9C59;
+      --secondary: #DF2E38;
+      --bg: #F5F5F5;
+      --white: #FFFFFF;
+      --dark: #1A120B;
+      --light: #D8D8D8;
+      --muted: #7D7D7D;
+      --radius: 16px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      bottom: -4px;
+      left: 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/foto.png');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      margin-left: 15px;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--white);
+      color: var(--primary);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--dark);
+      display: inline-block;
+    }
+
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: var(--primary);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Products */
+    .products {
+      background-color: var(--white);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .product-img {
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .product-info p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    /* Instagram */
+    .instagram {
+      text-align: center;
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .instagram h2 {
+      color: var(--white);
+    }
+
+    .instagram h2:after {
+      background: var(--white);
+    }
+
+    .instagram p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .instagram-btn {
+      background-color: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--white);
+    }
+
+    .instagram-btn:hover {
+      background-color: transparent;
+      color: var(--white);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-card:before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 60px;
+      color: var(--light);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-content {
+      margin-bottom: 20px;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-info {
+      margin-left: 15px;
+    }
+
+    .author-info .name {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .author-info .date {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 60px 5% 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3:after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+      bottom: 0;
+      left: 0;
+    }
+
+    .footer-column p {
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      padding-left: 5px;
+      color: var(--primary);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.7;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+      
+      .hero p {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+      
+      .hero {
+        height: 70vh;
+      }
+      
+      .hero h1 {
+        font-size: 32px;
+      }
+      
+      .hero p {
+        font-size: 16px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .section-title h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        height: 60vh;
+      }
+      
+      .hero h1 {
+        font-size: 28px;
+      }
+      
+      .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .btn-secondary {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Tehlicious Logo" />
+        <span>Tehlicious</span>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="payment.html">Pembayaran</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Premium Tea Experience</h1>
+      <p>Rasakan kenikmatan teh berkualitas tinggi dengan racikan spesial dari bahan-bahan pilihan</p>
+      <div class="btn-group">
+        <a href="menu.html" class="btn btn-primary">Lihat Menu</a>
+        <a href="#testimonials" class="btn btn-secondary">Testimoni</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="section-title">
+      <h2>Menu Favorit</h2>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img">
+          <img src="images/foto.png" alt="Teh Coklat" />
+        </div>
+        <div class="product-info">
+          <h3>Teh Coklat</h3>
+          <p>Perpaduan sempurna teh berkualitas dengan coklat premium</p>
+          <div class="price">Rp 15.000</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="images/foto1.png" alt="Milktea" />
+        </div>
+        <div class="product-info">
+          <h3>Milktea</h3>
+          <p>Teh susu dengan rasa lembut dan topping yang melimpah</p>
+          <div class="price">Rp 18.000</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="images/foto2.png" alt="Matcha" />
+        </div>
+        <div class="product-info">
+          <h3>Matcha Latte</h3>
+          <p>Matcha asli Jepang dengan tekstur creamy yang sempurna</p>
+          <div class="price">Rp 20.000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instagram">
+    <div class="section-title">
+      <h2>Follow Kami di Instagram</h2>
+    </div>
+    <p>Ikuti kami untuk update menu terbaru, promo spesial, dan konten menarik seputar dunia teh</p>
+    <a href="https://www.instagram.com/eggzy.pku/" target="_blank" class="btn instagram-btn">
+      <i class="fab fa-instagram"></i> @Tehlicious
+    </a>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="section-title">
+      <h2>Apa Kata Mereka?</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          Teh Coklatnya enak banget! Tidak terlalu manis dan aroma coklatnya terasa banget. Pasti akan order lagi.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <div class="name">Lina</div>
+            <div class="date">02 April 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          Matcha Lattenya authentic banget rasanya, seperti yang pernah saya coba di Kyoto. Pelayanannya juga cepat dan ramah.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <div class="name">@kulineran.id</div>
+            <div class="date">02 April 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          Anak-anak suka banget Milkteanya! Bahannya fresh dan tanpa pengawet. Sekarang jadi langganan keluarga kami.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <div class="name">Rina</div>
+            <div class="date">02 April 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Tentang Tehlicious</h3>
+        <p>Tehlicious menyajikan minuman teh premium dengan bahan-bahan berkualitas tinggi dan racikan spesial untuk pengalaman minum teh yang tak terlupakan.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Link Cepat</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="payment.html">Pembayaran</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Kontak Kami</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Pekanbaru No.123</p>
+        <p><i class="fas fa-phone"></i> (0761) 1234567</p>
+        <p><i class="fas fa-envelope"></i> info@tehlicious.com</p>
+        <p><i class="fas fa-clock"></i> Buka setiap hari 10.00 - 22.00</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Tehlicious. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
